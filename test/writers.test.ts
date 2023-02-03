@@ -1,5 +1,5 @@
 import { mockDeep } from 'jest-mock-extended';
-import { handleNewPost } from '../src/writers';
+import { handleTransfer } from '../src/writers';
 import type {
   AsyncMySqlPool,
   ContractSourceConfig,
@@ -35,7 +35,7 @@ describe('Writers', () => {
       };
       const mockMysql = mockDeep<AsyncMySqlPool>();
 
-      await handleNewPost({
+      await handleTransfer({
         tx,
         source,
         block,
