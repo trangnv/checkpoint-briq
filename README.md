@@ -1,15 +1,9 @@
-# Checkpoint starter template
-
-This is a template to quickly get started to use [Checkpoint](https://docs.checkpoint.fyi)
-to expose a GraphQL API to query data from your StarkNet contracts.
+# Checkpoint starter template - adapted for briq contract
 
 ## Getting started
 
-This starter project contains logic to index events from a StarkNet Poster contract that is defined in the
-[starknet-poster](https://github.com/snapshot-labs/starknet-poster/blob/master/contracts/Poster.cairo) repository.
+This is part of project [sybil-shield](https://github.com/carbonable-labs/sybil-shield) serve as indexer to index events from [briq contract](https://starkscan.co/contract/0x01435498bf393da86b4733b9264a86b58a42b31f8d8b8ba309593e5c17847672)
 
-Create a copy of this repository by clicking **'Use this template'** button or clicking [this
-link](https://github.com/snapshot-labs/checkpoint-template/generate).
 
 **Requirements**
 
@@ -42,19 +36,28 @@ yarn dev # for local development or else `yarn start` for production build.
 
 This will expose a GraphQL API endpoint locally at http://localhost:3000. You can easily interact with this endpoint using the graphiql interface by visiting http://localhost:3000 in your browser.
 
-To fetch a list of Post's try the following query:
+To fetch a list of Transfer's try the following query:
 
 ```graphql
+
+# Welcome to Checkpoint. Try running the below example query from
+# your defined entity.    
 query {
-  posts {
-    id
-    author
-    content
-    tag
-    created_at_block
-    created_at
-    tx_hash
-  }
+    transfers (
+      first: 1000
+      # skip: 1000
+      orderBy: created_at_block
+      orderDirection: asc
+    )  {
+        id
+        from
+        to
+        token_id
+        tx_hash
+        created_at
+        created_at_block
+      
+    }
 }
 ```
 
