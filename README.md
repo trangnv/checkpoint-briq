@@ -1,4 +1,4 @@
-# Checkpoint starter template - adapted for briq contract
+# Checkpoint indexer - adapted for briq contract
 
 ## Getting started
 
