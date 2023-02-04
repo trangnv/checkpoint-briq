@@ -15,7 +15,7 @@ export async function handleTransfer({ block, tx, event, mysql }: Parameters<Che
 
   const from = toAddress(event.data[0]);
   const to = toAddress(event.data[1]);
-  const value = BigInt(event.data[2]);
+  const token_id = BigInt(event.data[2]);
   const timestamp = block.timestamp;
   const blockNumber = block.block_number;
 
@@ -24,7 +24,7 @@ export async function handleTransfer({ block, tx, event, mysql }: Parameters<Che
     id: `${tx.transaction_hash}`,
     from,
     to,
-    value,
+    token_id,
     tx_hash: tx.transaction_hash,
     created_at: timestamp,
     created_at_block: blockNumber

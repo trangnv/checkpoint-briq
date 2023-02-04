@@ -4,7 +4,7 @@ type Transfer {
   id: String!
   from: String
   to: String!
-  value: Int!
+  token_id: Int!
   tx_hash: String!
   created_at: Int!
   created_at_block: Int!

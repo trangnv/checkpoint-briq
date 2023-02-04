@@ -1,8 +1,8 @@
 {
-  "network_node_url": "",
+  "network_node_url": "https://starknet-mainnet.infura.io/v3/db6722de01414151893502464bbc7220",
   "sources": [
     {
-      "contract": "0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+      "contract": "0x01435498bf393da86b4733b9264a86b58a42b31f8d8b8ba309593e5c17847672",
       "start": 19000,
       "events": [
         {
