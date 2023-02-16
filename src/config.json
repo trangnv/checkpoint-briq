@@ -1,5 +1,5 @@
 {
-  "network_node_url": "https://starknet-mainnet.infura.io/v3/db6722de01414151893502464bbc7220",
+  "network_node_url": "https://starknet-mainnet.infura.io/v3/{}",
   "sources": [
     {
       "contract": "0x01435498bf393da86b4733b9264a86b58a42b31f8d8b8ba309593e5c17847672",
