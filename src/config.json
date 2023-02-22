@@ -1,9 +1,10 @@
 {
-  "network_node_url": "https://starknet-mainnet.infura.io/v3/{}",
+  "network_node_url": "",
   "sources": [
     {
       "contract": "0x01435498bf393da86b4733b9264a86b58a42b31f8d8b8ba309593e5c17847672",
-      "start": 19000,
+      "abi": "Briq",
+      "start": 10000,
       "events": [
         {
           "name": "Transfer",
